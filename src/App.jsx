@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main>
+      <h1>
+        $400<span>.00</span>
+      </h1>
+      <form>
+        <div className="basic">
+          <input type="text" placeholder="+200 new samsung TV" />
+          <input type="datetime-local" />
+        </div>
+        <div className="description">
+          <input type="text" placeholder="description" />
+        </div>
+        <button type="submit">Add new Transaction</button>
+      </form>
+      <div className="transactions">
+        <div className="transaction">
+          <div className="left">
+            <div className="name">New Samsung TV</div>
+            <div className="description">It was time for new tv</div>
+          </div>
+          <div className="right">
+            <div className="price red">-$500</div>
+            <div className="datetime">2023-07-03</div>
+          </div>
+        </div>
+        <div className="transaction">
+          <div className="left">
+            <div className="name">Gig job new website</div>
+            <div className="description">It was time for new tv</div>
+          </div>
+          <div className="right">
+            <div className="price green">+$400</div>
+            <div className="datetime">2023-07-03</div>
+          </div>
+        </div>
+        <div className="transaction">
+          <div className="left">
+            <div className="name">Iphone</div>
+            <div className="description">It was time for new tv</div>
+          </div>
+          <div className="right">
+            <div className="price red">-$500</div>
+            <div className="datetime">2023-07-03</div>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;
